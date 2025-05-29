@@ -1,3 +1,5 @@
+// iterative solution
+
 function fibs(x) {
   let array = [];
 
@@ -11,6 +13,8 @@ function fibs(x) {
 }
 
 console.log(fibs(8));
+
+// recursive solution
 
 function fibsRec(x, array = []) {
   if (x === 0) return array;
