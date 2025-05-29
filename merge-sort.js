@@ -11,6 +11,9 @@ function mergeSort(array) {
       rightHalf = array.slice((array.length - 1) / 2, array.length);
     }
 
+    let leftHalfSorted = mergeSort(leftHalf);
+    let rightHalfSorted = mergeSort(rightHalf);
+
     function mergeArrays(arr1, arr2) {
       let newArray = [];
 
@@ -24,9 +27,6 @@ function mergeSort(array) {
 
       return newArray;
     }
-
-    let leftHalfSorted = mergeSort(leftHalf);
-    let rightHalfSorted = mergeSort(rightHalf);
 
     return mergeArrays(leftHalfSorted, rightHalfSorted);
   }
